@@ -11,6 +11,6 @@ makedocs(
 )
 
 deploydocs(
-    repo = "https://github.com/florian-die/ClosedLoop.jl.git",
+    repo = "github.com/florian-die/ClosedLoop.jl.git",
     devbranch = "master"
 )
