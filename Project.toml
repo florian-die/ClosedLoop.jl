@@ -1,0 +1,4 @@
+name = "ClosedLoop"
+uuid = "88264e05-5760-4e3a-bbfd-b24d3fd25a14"
+authors = ["Florian Dietrich <florian.dietrich@onera.fr>"]
+version = "0.1.0"
