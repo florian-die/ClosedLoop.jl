@@ -1,15 +1,15 @@
-    ```@meta
-    CurrentModule = ClosedLoop 
-    ```
+```@meta
+CurrentModule = ClosedLoop 
+```
 
-    ```@contents
-    Pages = ["api.md"]
-    ```
+```@contents
+Pages = ["api.md"]
+```
 
-    # API
-    This page is a dump of all the docstrings found in the code. 
+# API
+This page is a dump of all the docstrings found in the code. 
 
-    ```@autodocs
-    Modules = [ClosedLoop]
-    Order = [:module, :type, :function, :macro]
-    ```
+```@autodocs
+Modules = [ClosedLoop]
+Order = [:module, :type, :function, :macro]
+```
