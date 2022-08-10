@@ -2,3 +2,7 @@ name = "ClosedLoop"
 uuid = "88264e05-5760-4e3a-bbfd-b24d3fd25a14"
 authors = ["Florian Dietrich <florian.dietrich@onera.fr>"]
 version = "0.1.0"
+
+[deps]
+DifferentialEquations = "0c46a032-eb83-5123-abaf-570d42b7fbaa"
+Distributions = "31c24e10-a181-5473-b8eb-7969acd0382f"
