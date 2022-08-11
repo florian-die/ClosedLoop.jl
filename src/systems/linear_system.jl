@@ -1,23 +1,42 @@
 """
-    LinearSystem
+$(TYPEDEF)
+
+A linear time-invariant state-space model of equations 
+
+``ẋ = Ax + Bu``
+
+``y = Cx + Du`` 
+
+# Fields 
+$(FIELDS)
 """
 struct LinearSystem <: AbstractSystem
-    # continous time state-space matrices 
-    # ẋ = Ax + Bu, y = Cx + Du 
+    """State matrix of size `nx` by `nx`"""
     A 
+    """Control matrix of size `nu` by `nx`"""
     B
+    """Sensor matrix of size `nx` by `ny`"""
     C
+    """Sensor matrix of size `nu` by `ny`"""
     D
 
-    # measurement noise properties
-    "μ : mean of the sensor noise"
-    μ # mean 
-    Σ # covariance matrix
-    rng # random number generator : MvNormal(μ,Σ)
+    """Mean of sensor noise"""
+    μ 
+    """Covariance matrix of sensor noise"""
+    Σ 
+    """
+    Random number generator for sensor noise.
 
-    # variables dimension
-    # inferred form the matrices size
-    nx # state
-    nu # control input
-    ny # measurements
+    It is automatically created based on `μ` and `Σ` with
+
+    `rng = MvNormal(μ,PSDMat(Σ))`
+    """
+    rng 
+
+    """State dimension"""
+    nx 
+    """Control dimension"""
+    nu 
+    """Measurements dimension"""
+    ny 
 end

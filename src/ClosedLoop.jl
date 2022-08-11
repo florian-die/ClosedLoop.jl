@@ -1,5 +1,6 @@
 module ClosedLoop
 
+using DocStringExtensions
 using LinearAlgebra
 using DifferentialEquations
 using Distributions, PDMatsExtras
