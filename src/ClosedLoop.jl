@@ -1,6 +1,8 @@
 module ClosedLoop
 
+using LinearAlgebra
 using DifferentialEquations
+using Distributions, PDMatsExtras
 
 include("systems.jl")
 include("controllers.jl")
