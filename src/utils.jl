@@ -1,5 +1,7 @@
 """
-    sizes(A,B,C,D=[])
+$(TYPEDSIGNATURES)
+
+Returns size of state, control and measurements from state-space matrices
 """
 function sizes(A,B,C,D=[])
 

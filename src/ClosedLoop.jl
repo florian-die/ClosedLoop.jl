@@ -11,6 +11,8 @@ include("controllers.jl")
 include("filters.jl")
 include("simulations.jl")
 
+export sizes, number2array
+
 export LinearSystem
 
 greet() = print("Hello World!")
