@@ -15,7 +15,4 @@ export sizes, number2array
 
 export LinearSystem
 
-greet() = print("Hello World!")
-include("foo.jl")
-
 end # module
