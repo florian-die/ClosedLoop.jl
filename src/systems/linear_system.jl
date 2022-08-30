@@ -91,6 +91,10 @@ function state_dynamics(x,u,sys::LinearSystem)
     return sys.A * x + sys.B * u 
 end
 
+function noiseless_measurement(x,u,sys::LinearSystem)
+    return sys.C * x + sys.D * u
+end
+
 function noisy_measurement(x,u,sys::LinearSystem)
-    return sys.C * x + sys.D * u + rand(sys.rng)
+    return noiseless_measurement(x,u,sys::LinearSystem) + rand(sys.rng)
 end
