@@ -2,6 +2,8 @@ using ClosedLoop
 using Test
 
 # scalar system without D
+# ẋ = u 
+# y = x 
 
 A = 0.
 B = 1.
@@ -19,9 +21,26 @@ sys = LinearSystem(A,B,C)
 @test sys.nu == 1
 @test sys.ny == 1
 
-# scalar system with D
+x = 2.
+u = 1.
 
-D = 2.0
+@test state_dynamics(x,u,sys) == [1.;;]
+@test noiseless_measurement(x,u,sys) == [2.;;]
+@test noisy_measurement(x,u,sys) == [2.;;]
+
+# scalar system with D
+# ẋ = u 
+# y = x + 2*u
+
+A = 0.
+B = 1.
+C = 1.
+D = 2.
 
 sys = LinearSystem(A,B,C,D)
 @test sys.D == [2. ;;]
+
+x = 2.
+u = 1.
+
+@test noiseless_measurement(x,u,sys) == [4.;;]

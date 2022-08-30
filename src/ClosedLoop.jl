@@ -14,5 +14,6 @@ include("simulations.jl")
 export sizes, number2array
 
 export LinearSystem
+export state_dynamics, noiseless_measurement, noisy_measurement
 
 end # module
